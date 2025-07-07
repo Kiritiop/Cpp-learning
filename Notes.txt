@@ -1,0 +1,16 @@
+C++ is pretty similar to Java, every line ends with ;
+
+To run a C++ file,
+g++ fileName.cpp -o fileName
+./fileName
+
+// single-line comment
+
+/*
+multi-line comment
+*/
+
+#include <iostream> will usually be in every C++ file. It basically brings in the standard input/output library
+
+cout << "" ;
+cin >> num ;
