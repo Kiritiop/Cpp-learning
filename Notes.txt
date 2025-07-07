@@ -12,5 +12,24 @@ multi-line comment
 
 #include <iostream> will usually be in every C++ file. It basically brings in the standard input/output library
 
-cout << "" ;
-cin >> num ;
+Namespace
+A namespace is basically a way to group functions together, similar to importing a file in python and using its functions (same same but different)
+Used to organize code and avoid naming conflicts.
+using namespace std;
+
+cout << " " ; output
+cout << " " << num << " " << endl;
+cin >> num ; input, only reads untill the first white space
+
+Data types
+int num = 2;                        // Integer 
+float num = 3.14f;                 // Decimals, uses 4 bytes, 7 digits, needs f at the end or else it is treated as a double automatically
+double doub = 3.1415926;          // Decimals, uses 8 bytes, 15-16 digits
+char letter = 'a';               // Character
+bool yes = true;                // Boolean
+
+
+String is not part of base C++, it needs std::string, should #include <string> even though it should work without for advanced compilers
+string text = "Hello World!";  // String
+
+const float pi = 3.14f; constant
