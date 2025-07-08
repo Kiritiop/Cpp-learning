@@ -27,6 +27,9 @@ float num = 3.14f;                 // Decimals, uses 4 bytes, 7 digits, needs f 
 double doub = 3.1415926;          // Decimals, uses 8 bytes, 15-16 digits
 char letter = 'a';               // Character
 bool yes = true;                // Boolean
+You can also use auto to let the computer automatically assign a data type to your variable
+Note: You must assign the value of the variable at the same time if using auto.
+auto num = 5 -> num will be automatically an integer
 
 
 String is not part of base C++, it needs std::string. String should be imported when you #include <iostream>, if not then #include <String>
