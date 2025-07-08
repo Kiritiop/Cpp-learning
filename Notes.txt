@@ -33,3 +33,20 @@ String is not part of base C++, it needs std::string, should #include <string> e
 string text = "Hello World!";  // String
 
 const float pi = 3.14f; constant
+
+Operations
+Same as other languages, +, -, *, /, %, ==, !=, >, <, >=, <=
+Logical operators: && = and, || = or, ! = not
+Pre-increment/decrement, post-increment/decrement: ++a, --a, a++, a-- difference in executing action first or adding first
+
+Operators are evaluated in a specific order:
+
+Parentheses ()
+Unary operators (++, --, !, etc.)
+Multiplication, division, modulus (*, /, %)
+Addition, subtraction (+, -)
+Relational operators (<, >, <=, >=)
+Equality operators (==, !=)
+Logical AND (&&)
+Logical OR (||)
+Assignment operators (=, +=, -=, etc.)
