@@ -29,10 +29,10 @@ char letter = 'a';               // Character
 bool yes = true;                // Boolean
 
 
-String is not part of base C++, it needs std::string, should #include <string> even though it should work without for advanced compilers
-string text = "Hello World!";  // String
+String is not part of base C++, it needs std::string. String should be imported when you #include <iostream>, if not then #include <String>
+std::string text = "Hello World!";  // String
 
-const float pi = 3.14f; constant
+const float pi = 3.14f; constant, not to be changed
 
 Operations
 Same as other languages, +, -, *, /, %, ==, !=, >, <, >=, <=
@@ -50,3 +50,12 @@ Equality operators (==, !=)
 Logical AND (&&)
 Logical OR (||)
 Assignment operators (=, +=, -=, etc.)
+
+If statements:
+if () {
+
+} else if () {
+
+} else {
+
+}
