@@ -20,13 +20,14 @@ using namespace std;
 cout << " " ; output
 cout << " " << num << " " << endl;
 cin >> num ; input, only reads untill the first white space
+getline(cin, variable); Reads the line of text and stores it in the variable
 
 Data types
 int num = 2;                        // Integer 
 float num = 3.14f;                 // Decimals, uses 4 bytes, 7 digits, needs f at the end or else it is treated as a double automatically
 double doub = 3.1415926;          // Decimals, uses 8 bytes, 15-16 digits
 char letter = 'a';               // Character
-bool yes = true;                // Boolean
+bool yes = true;                // Boolean - true and false in C++ are all lowercase letters
 You can also use auto to let the computer automatically assign a data type to your variable
 Note: You must assign the value of the variable at the same time if using auto.
 auto num = 5 -> num will be automatically an integer
@@ -34,6 +35,11 @@ auto num = 5 -> num will be automatically an integer
 
 String is not part of base C++, it needs std::string. String should be imported when you #include <iostream>, if not then #include <String>
 std::string text = "Hello World!";  // String
+Appending in strings: .append();
+.length() or .size() to get length of a string
+To get a specific character from a string, same as python word[0], or word.at(0)
+Change value of a specific character in a string word[0] = 'A'; or word.at(0) = 'A';
+The escape character in C++ is also \, so to type " in a string its \", additionally, \n is next line, \t is tab
 
 const float pi = 3.14f; constant, not to be changed
 
@@ -53,6 +59,14 @@ Equality operators (==, !=)
 Logical AND (&&)
 Logical OR (||)
 Assignment operators (=, +=, -=, etc.)
+
+C++ math:
+max() and min() are included in base C++
+The cmath libray adds other math functions 
+#include <cmath>
+sqrt()
+round()
+log()
 
 If statements:
 if () {
