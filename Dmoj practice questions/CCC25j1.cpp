@@ -8,7 +8,7 @@ int main() {
     cin >> c;
     int p;
     cin >> p;
-    if (c * p > n) {
+    if (c * p >= n) {
         cout << "yes";
     } else {
         cout << "no";
