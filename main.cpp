@@ -2,19 +2,26 @@
 using namespace std;
 
 int main() {
-    string word;
-    getline(cin, word);
-    while (word != "quit!") {
-        if (word.length() > 4 && word[word.length() -3] != 'a' && word[word.length() -3] != 'e' && word[word.length() -3] != 'i' && word[word.length() -3] != 'o' && word[word.length() -3] != 'u' && word[word.length() -3] != 'y') {
-            if (word[word.length()-1] == 'r' && word[word.length()-2] == 'o') {
-                word[word.length()-1] = 'u';
-                word += 'r';
+    int n;
+    cin >> n;
+    cin.ignore();
+    for (int i = 0; i < n; i++) {
+        string code;
+        string newcode;
+        getline(cin, code);
+        int num = 0;
+        for (int j = 0; j < code.length(); j++){
+            if (isupper(code[j])){
+                newcode += code[j];
+            } else if (isdigit(code[j]) && j+1 < code.length() && !isdigit(code[j+1])){
+                num += code[j]-'0';
+            } else if (isdigit(code[j]) && j+1 < code.length() && isdigit(code[j+1])) {
+                num += (code[j] - '0') * 10 + (code[j+1] - '0');
+            } else if (isdigit(code[j])) {
+                num += code[j]-'0';
             }
-        }
-        cout << word << endl;
-        getline(cin, word);
-        
-    }
 
-    
+        }
+        cout << newcode << to_string(num) << endl;
+    }
 }
