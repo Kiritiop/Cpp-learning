@@ -1,15 +1,13 @@
 #include <iostream>
+#include <vector>
 using namespace std;
 
 int main() {
-    int dusa, yobi;
-    cin >> dusa >> yobi;
-    while (dusa > yobi) {
-        dusa += yobi;
-        cin >> yobi;
+    vector<int> nums = {1, 2, 3, 4, 5};
+    nums.push_back(6);
+    nums.push_back(7);
+    for (int i = 0; i < nums.size(); i++) {
+    cout << nums[i] << "\n";
     }
-
-
-    cout << dusa << endl;
     return 0;
 }

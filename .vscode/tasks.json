@@ -1,0 +1,19 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build and run",
+            "type": "shell",
+            "command": "/bin/bash",
+            "args": [
+                "-c",
+                "g++ -std=c++11 -g \"/Users/liwang/Desktop/Cpp/Cpp-learning/main.cpp\" -o \"/Users/liwang/Desktop/Cpp/Cpp-learning/main\" && \"/Users/liwang/Desktop/Cpp/Cpp-learning/main\""
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"]
+        }
+    ]
+}

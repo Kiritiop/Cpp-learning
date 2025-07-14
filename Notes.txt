@@ -92,4 +92,12 @@ while (i < 5) {
 
 Break and continue are the same thing as in other languages, break; and continue;
 
+The <vector> library: #include <vector>
+A vector is basically an array that can be changed
+vector<int> nums = {1, 2, 3, 4, 5};
+for (int num : nums) {
+  cout << num << "\n";
+}
+To append/add an item into a vector, we use .push_back()
+num.push_back(6)
 
