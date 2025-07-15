@@ -1,11 +1,12 @@
 #include <iostream>
+#include <vector>
 using namespace std;
 
 int main() {
-    int first, second, third, score = 0;
+    int first, second, third, score, counter = 0;
     int number;
     cin >> number;
-    int num[] = {};
+    vector<int> nums;
     for (int i = 0; i < number; i++) {
         cin >> score;
         if (score >= first) {
@@ -15,7 +16,13 @@ int main() {
         } else if (score >= third) {
             third = score;
         }
-
+        nums.push_back(score);
     }
+    for (int i = 0; i < nums.size(); i++) {
+        if (nums[i] == third) {
+            counter++;
+        }
+    }
+    cout << third << " " << counter << endl;
     return 0;
 }
