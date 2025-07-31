@@ -1,27 +1,43 @@
 #include <iostream>
+#include <string>
+#include <cctype>
+
 using namespace std;
 
 int main()
 {
-    int n = 0;
-    int pt, foul;
-    int star = 0;
-    cin >> n;
-    for (int i = 0; i < n; i++)
+    string instructions;
+    cin >> instructions;
+
+    string buffer;
+
+    for (int i = 0; i < instructions.size(); i++)
     {
-        cin >> pt >> foul;
-        if ((pt * 5 - foul * 3) > 40)
+        char currentChar = instructions[i];
+
+        if (isalpha(currentChar))
         {
-            star++;
+            buffer += currentChar;
+        }
+        else if (currentChar == '+')
+        {
+            buffer += " tighten ";
+        }
+        else if (currentChar == '-')
+        {
+            buffer += " loosen ";
+        }
+        else if (isdigit(currentChar))
+        {
+            buffer += currentChar;
+            if (i + 1 < instructions.size() && isalpha(instructions[i + 1]))
+            {
+                cout << buffer << endl;
+                buffer = "";
+            }
         }
     }
-    if (star == n)
-    {
-        cout << star << "+" << endl;
-    }
-    else
-    {
-        cout << star << endl;
-    }
+    cout << buffer << endl;
+
     return 0;
 }
