@@ -1,0 +1,27 @@
+#include <sstream>
+#include <string>
+#include <iostream>
+using namespace std;
+
+// Converting numbers to strings
+int num = 42;
+stringstream ss1;
+ss1 << num;
+string str_num = ss1.str(); // "42"
+
+// Converting strings to numbers
+string str = "123";
+stringstream ss2(str);
+int value;
+ss2 >> value; // value = 123
+
+// Parsing space-separated values
+string input = "10 20 30 40";
+stringstream ss3(input);
+int a, b, c, d;
+ss3 >> a >> b >> c >> d; // a=10, b=20, c=30, d=40
+
+// Formatting output
+stringstream ss4;
+ss4 << "Name: " << "John" << ", Age: " << 25;
+string formatted = ss4.str(); // "Name: John, Age: 25"

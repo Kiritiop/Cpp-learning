@@ -35,11 +35,41 @@ auto num = 5 -> num will be automatically an integer
 
 String is not part of base C++, it needs std::string. String should be imported when you #include <iostream>, if not then #include <String>
 std::string text = "Hello World!";  // String
-Appending in strings: .append();
-.length() or .size() to get length of a string
 To get a specific character from a string, same as python word[0], or word.at(0)
 Change value of a specific character in a string word[0] = 'A'; or word.at(0) = 'A';
 The escape character in C++ is also \, so to type " in a string its \", additionally, \n is next line, \t is tab
+Position ≠ index of a string. Position is index + 1
+String streams allow treating strings like input/output streams, which is useful for parsing and formatting, including converting numbers to strings and others, more info check stringStreams.txt
+
+Functions for strings:
+.empty() check if a string is empty
+.front() get first char of string
+.back() get last char of string
+.append() appending something to string
+.push_back() appending a char to end of string
+.length() or .size() to get length of a string
+.substr(position, length) creates a substring with the specified conditions, if no length specified -> until end
+.erase(position, length) erases chars from position 
+.clear() clears string
+.find() finds the position of a word or char in string
+.rfind() finds the position of the last instance of word/char in string
+.find_first_of("aeiou") finds the position of first char in parameters
+.find_last_of("aeiou") finds position of last char in parameters
+.find_first_not_of("abcdefghijklmnopqrstuvwxyz ") finds position of character not in parameters
+.insert(position, copies, 'text') insert something at a specified position in a string, if no copies specifed -> assumed 1 copy
+
+tolower() change char to lowercase
+toupper() change char to uppercase
+
+#include <cctype> literally character type
+
+isalpha(c); 
+isdigit(c); 
+isalnum(c);
+islower(c); 
+isupper(c);
+isspace(c); 
+ispunct(c); 
 
 const float pi = 3.14f; constant, not to be changed
 
