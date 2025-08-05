@@ -5,7 +5,10 @@
         "iostream": "cpp",
         "cstddef": "cpp",
         "ostream": "cpp",
-        "vector": "cpp"
+        "vector": "cpp",
+        "chrono": "cpp",
+        "limits": "cpp",
+        "algorithm": "cpp"
     },
     "C_Cpp.errorSquiggles": "enabled"
 }
