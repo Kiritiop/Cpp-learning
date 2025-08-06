@@ -107,6 +107,20 @@ if () {
 
 }
 
+switch (expression){
+    case a:
+        code
+        break;
+
+    case b:
+        code
+        break;
+    
+    default:
+        code  
+}
+
+
 For loop(similar to Java):
 for (int i = 0; i < 5; i++) {
         cout << "i = " << i << endl;
