@@ -1,43 +1,46 @@
-#include <iostream>
-#include <string>
-#include <cctype>
+#include <cstdio>      
+#include <algorithm> 
 
-using namespace std;
+char line[500001];
 
-int main()
-{
-    string instructions;
-    cin >> instructions;
+int main() {
+    scanf("%s", line);
 
-    string buffer;
-
-    for (int i = 0; i < instructions.size(); i++)
-    {
-        char currentChar = instructions[i];
-
-        if (isalpha(currentChar))
-        {
-            buffer += currentChar;
+    int len = 0;
+    int countL = 0;
+    int countM = 0;
+    for (len = 0; line[len] != '\0'; ++len) {
+        if (line[len] == 'L') {
+            countL++;
+        } else if (line[len] == 'M') {
+            countM++;
         }
-        else if (currentChar == '+')
-        {
-            buffer += " tighten ";
-        }
-        else if (currentChar == '-')
-        {
-            buffer += " loosen ";
-        }
-        else if (isdigit(currentChar))
-        {
-            buffer += currentChar;
-            if (i + 1 < instructions.size() && isalpha(instructions[i + 1]))
-            {
-                cout << buffer << endl;
-                buffer = "";
+    }
+
+    int s_misplaced = 0;
+    int m_in_l_zone = 0;
+    int l_in_m_zone = 0;
+
+    for (int i = 0; i < countL; ++i) {
+        if (line[i] != 'L') {
+            s_misplaced++;
+            if (line[i] == 'M') {
+                m_in_l_zone++;
             }
         }
     }
-    cout << buffer << endl;
+
+    for (int i = countL; i < countL + countM; ++i) {
+        if (line[i] != 'M') {
+            s_misplaced++;
+            if (line[i] == 'L') {
+                l_in_m_zone++;
+            }
+        }
+    }
+    
+    int result = s_misplaced - std::min(m_in_l_zone, l_in_m_zone);
+    printf("%d\n", result);
 
     return 0;
 }
