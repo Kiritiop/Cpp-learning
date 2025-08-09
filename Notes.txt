@@ -147,6 +147,7 @@ for (int i = 0; i < nums.size(); i++) {
 for (string word : words) {
   cout << word << "\n";
 }
+
 To append/add an item into a vector, we use .push_back()
 nums.push_back(6)
 To delete, .pop_back()
