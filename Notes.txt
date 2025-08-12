@@ -125,6 +125,10 @@ For loop(similar to Java):
 for (int i = 0; i < 5; i++) {
         cout << "i = " << i << endl;
     }
+For each loop:
+for (string word : words) {
+  cout << word << "\n";
+}
 
 While loop:
 int i = 0;
@@ -140,12 +144,10 @@ The <vector> library: #include <vector>
 A vector is basically an array that can be changed
 vector<int> nums = {1, 2, 3, 4, 5};
 .size() function to find size of vector
-Loop through a vector
+
+Loop through a vector:
 for (int i = 0; i < nums.size(); i++) {
     cout << nums[i] << "\n";
-}
-for (string word : words) {
-  cout << word << "\n";
 }
 
 To append/add an item into a vector, we use .push_back()
