@@ -107,7 +107,7 @@ if () {
 
 }
 
-switch (expression){
+switch (Variable){
     case a:
         code
         break;
