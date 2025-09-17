@@ -1,5 +1,5 @@
 S = input().strip()
-c = int(input().strip())
+c = int(input())
 
 pairs = []
 i = 0
@@ -12,7 +12,7 @@ while i < len(S):
     count = int(S[num_start:i])
     pairs.append((char, count))
 
-total_len = sum(count for _, count in pairs)
+total_len = sum(count for i, count in pairs)
 pos = c % total_len
 
 for ch, cnt in pairs:
