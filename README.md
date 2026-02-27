@@ -3,8 +3,6 @@
 During the development of our game, we encountered a problem where all items in the scene hierarchy were purged.  
 An easy fix is to revert your changes from a previous commit.
 
----
-
 ## Find the Broken Commit
 
 ```bash
@@ -12,8 +10,6 @@ git log --oneline
 ```
 
 Locate the commit that broke your program.
-
----
 
 ## Revert the Commit
 
@@ -33,8 +29,6 @@ Then push the changes:
 git push
 ```
 
----
-
 ## Handling Merge Conflicts
 
 If you encounter a merge conflict when pushing:
@@ -44,8 +38,6 @@ If you encounter a merge conflict when pushing:
 ```bash
 git status
 ```
-
----
 
 ## Open the conflicted file
 
@@ -74,8 +66,6 @@ Choose what you want to keep and delete the rest.
 
 Keep only the correct code in the file.
 
----
-
 ## Mark conflict as resolved
 
 After saving the file:
@@ -101,8 +91,6 @@ Then push:
 ```bash
 git push
 ```
-
----
 
 ## Final Step
 
