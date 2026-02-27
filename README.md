@@ -5,7 +5,7 @@ An easy fix is to revert your changes from a previous commit.
 
 ---
 
-### 1️⃣ Find the Broken Commit
+## Find the Broken Commit
 
 ```bash
 git log --oneline
@@ -15,7 +15,7 @@ Locate the commit that broke your program.
 
 ---
 
-### 2️⃣ Revert the Commit
+## Revert the Commit
 
 ```bash
 git revert <commit-hash>
@@ -39,7 +39,7 @@ git push
 
 If you encounter a merge conflict when pushing:
 
-### 1️⃣ Check which files have conflicts
+## Check which files have conflicts
 
 ```bash
 git status
@@ -47,7 +47,7 @@ git status
 
 ---
 
-### 2️⃣ Open the conflicted file
+## Open the conflicted file
 
 You may see something like:
 
@@ -76,7 +76,7 @@ Keep only the correct code in the file.
 
 ---
 
-### 3️⃣ Mark conflict as resolved
+## Mark conflict as resolved
 
 After saving the file:
 
