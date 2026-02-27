@@ -1,9 +1,9 @@
-### Reverting a Broken Commit (Git Guide)
+# Reverting a Broken Commit (Git Guide)
 
 During the development of our game, we encountered a problem where all items in the scene hierarchy were purged.  
 An easy fix is to revert your changes from a previous commit.
 
-## Find the Broken Commit
+### Find the Broken Commit
 
 ```bash
 git log --oneline
@@ -11,7 +11,7 @@ git log --oneline
 
 Locate the commit that broke your program.
 
-## Revert the Commit
+### Revert the Commit
 
 ```bash
 git revert <commit-hash>
@@ -29,17 +29,17 @@ Then push the changes:
 git push
 ```
 
-## Handling Merge Conflicts
+### Handling Merge Conflicts
 
 If you encounter a merge conflict when pushing:
 
-## Check which files have conflicts
+### Check which files have conflicts
 
 ```bash
 git status
 ```
 
-## Open the conflicted file
+### Open the conflicted file
 
 You may see something like:
 
@@ -66,7 +66,7 @@ Choose what you want to keep and delete the rest.
 
 Keep only the correct code in the file.
 
-## Mark conflict as resolved
+### Mark conflict as resolved
 
 After saving the file:
 
@@ -92,6 +92,6 @@ Then push:
 git push
 ```
 
-## Final Step
+### Final Step
 
 Once everyone pulls from `origin`, the repository will reflect the reverted version, and the team can continue development from a stable state.
