@@ -1,4 +1,4 @@
-## Reverting a Broken Commit (Git Guide)
+### Reverting a Broken Commit (Git Guide)
 
 During the development of our game, we encountered a problem where all items in the scene hierarchy were purged.  
 An easy fix is to revert your changes from a previous commit.
