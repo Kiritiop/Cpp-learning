@@ -1,10 +1,10 @@
 N = int(input())
-children = [[] for i in range(N + 1)]
-    
+children = [[] for _ in range(N + 1)]
+
 for i in range(1, N):
     j = int(input())
     children[j].append(i)
-    
+
 f = [0] * (N + 1)
     
 def dfs(u):
